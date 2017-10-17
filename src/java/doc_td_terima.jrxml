@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="doc_tanda_terima" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="5f28fc2c-4bbd-4460-a64f-6acd39913d94">
+	<property name="ireport.zoom" value="3.0"/>
+	<property name="ireport.x" value="10"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="jenis_perizinan" class="java.lang.String"/>
+	<parameter name="no_bsw" class="java.lang.String"/>
+	<parameter name="no_izin" class="java.lang.String"/>
+	<parameter name="data_pemilik_akun" class="java.lang.String"/>
+	<parameter name="jenis_permohonan" class="java.lang.String"/>
+	<parameter name="pemohon" class="java.lang.String"/>
+	<parameter name="no_surat" class="java.lang.String"/>
+	<parameter name="tgl_reg" class="java.lang.String"/>
+	<parameter name="tgl_verifikasi" class="java.lang.String"/>
+	<parameter name="img_param" class="java.lang.String"/>
+	<title>
+		<band height="73" splitType="Stretch">
+			<staticText>
+				<reportElement x="106" y="0" width="380" height="30" uuid="40112c8c-cf13-4261-b3b1-cb52869baadd"/>
+				<textElement>
+					<font fontName="Calibri" size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PELAYANAN TERPADU SATU PINTU (PTSP)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="30" width="437" height="20" uuid="4b7f852d-689d-4f68-97b9-4196ef88dc87"/>
+				<textElement>
+					<font fontName="Calibri" size="14"/>
+				</textElement>
+				<text><![CDATA[Gedung Sumatera Convenction Center (SCC), JL. Engku Puteri, Batam]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="106" y="50" width="400" height="20" uuid="3f1a78a4-5048-4a14-82cb-dd3cdae0cb63"/>
+				<textElement>
+					<font fontName="Calibri" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Center – Batam 29421. www.bsw.go.id]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="70" width="556" height="1" uuid="581d7333-1903-4f7c-83fb-9095caf40a45"/>
+			</line>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="31">
+			<staticText>
+				<reportElement x="118" y="7" width="277" height="20" uuid="96ea8017-e4d6-4d08-b50f-259802a57c4e"/>
+				<textElement textAlignment="Center">
+					<font fontName="Calibri" size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TANDA DAFTAR PERMOHONAN]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="617" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="59" width="192" height="20" uuid="1e1b217c-1298-444a-ac4d-b9eb0cb7a1f3"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[3. No Izin			:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="155" width="192" height="19" uuid="8bbabaf7-51b2-439c-b8fe-175070e6f088"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[	- No Surat		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="194" width="294" height="19" uuid="6decfba4-d6d8-4aeb-ac06-344ce6eedae3"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[6. Diminta hadir untuk melakukan verifikasi berkas	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="213" width="192" height="19" uuid="b684e15f-8983-4e8a-ae8f-cf01eea54dec"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[	- Tanggal	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="79" width="192" height="19" uuid="95df2f68-c10a-4f3e-a7dc-080149a20d8e"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[4. Data Pemilik Akun BSW	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="136" width="192" height="19" uuid="10e547bf-6869-41f4-93b2-42a99a0f82b5"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[	- Pemohon		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="117" width="192" height="19" uuid="c56738dc-d8dc-4ee7-a5a5-35c8bcd6e312"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[	- Jenis Permohonan	:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="174" width="192" height="19" uuid="2a604d6a-4507-47e8-a427-aa66b102cbc6"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[	- Tgl Registrasi		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="40" width="192" height="19" uuid="8a678bee-3e9e-4a4e-8244-8d9a28db5f4f"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[2. No BSW			:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="232" width="294" height="19" uuid="c97613bf-a9d9-457f-9483-bb7fb93b9320"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[7. Catatan	]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="22" width="192" height="18" uuid="fa913185-a7a1-4b51-bbf1-9e62cbfadb6e"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1. Jenis Perizinan		:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="98" width="192" height="19" uuid="b27bda18-9f95-4220-b62f-a7ce1766d461"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[5. Data Pemohon		]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="514" width="335" height="19" forecolor="#0066FF" uuid="f805ea24-e6a1-4228-80f6-dc5de700424a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[www.informasipelayanan.bpbatam.go.id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="381" width="214" height="19" uuid="84473a59-ce1c-47ed-a2c5-40ecc62742db"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Layanan Informasi Dan Pengaduan PTSP :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="476" width="167" height="19" uuid="40f10a6c-74f6-4f36-b197-bd68c5ee806c"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Twitter       			:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="438" width="167" height="19" uuid="25f42e53-953c-4335-855e-368adcaaa306"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Sms        			: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="457" width="167" height="19" uuid="b471fa4e-b56b-418c-9362-ef56f2955bfa"/>
+				<textElement textAlignment="Left">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Suggestion & Complaint Email  	: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="251" width="518" height="48" uuid="f5ca8ac5-4027-4566-ae6f-d58db71dd1fc"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[	- Pemohon yang datang diluar tanggal yang ditentukan, maka permohonan yang sudah dilakukan
+	  tidak dapat di lanjutkan. Oleh  karenanya pemohon diharuskan membuat permohonan
+	  kembali.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="419" width="167" height="19" uuid="d34c807d-07cb-4bc0-a612-40b7d20dae11"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Fax				:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="320" width="518" height="48" uuid="265910c9-dd92-443a-9273-715be9ae45b3"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[Dokumen ini merupakan dokumen elektronik  dan merupakan  tanda  daftar  yang resmi  atau sah. Untuk memeriksa keabsahan  dokumen ini, dapat menghubungi  Pelayanan Terpadu Satu Pintu Badan Pengusahaan Batam.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="300" width="518" height="20" uuid="d05fdc60-7ad8-4b0a-8952-c691aabb96d6"/>
+				<textElement>
+					<font fontName="Calibri" size="12"/>
+				</textElement>
+				<text><![CDATA[	- Pemohon diwajibkan membawa dokumen persyaratan asli dan tanda daftar permohonan ini.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="400" width="167" height="19" uuid="0d767021-210d-449b-ba5e-3c83db775421"/>
+				<textElement>
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Telephone			: ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="495" width="335" height="19" forecolor="#0066FF" uuid="c1e9901b-7acb-46c5-95d6-0f8f6cd8ad28"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[www.bsw.go.id]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="203" y="22" width="289" height="18" uuid="ab32108c-5e88-454c-8424-5f2b91876002"/>
+				<textFieldExpression><![CDATA[$P{jenis_perizinan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="39" width="289" height="20" uuid="7e0a910d-ded4-4024-b3a7-5a61e0b7d331"/>
+				<textFieldExpression><![CDATA[$P{no_bsw}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="59" width="289" height="20" uuid="0afbdab4-5790-4381-8367-f687b831a226"/>
+				<textFieldExpression><![CDATA[$P{no_izin}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="78" width="289" height="20" uuid="6099a748-2c37-4c0a-b97e-98c562af5110"/>
+				<textFieldExpression><![CDATA[$P{data_pemilik_akun}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="117" width="289" height="19" uuid="cf612fc0-8fd3-4d20-90b6-a42bd2547de4"/>
+				<textFieldExpression><![CDATA[$P{jenis_permohonan}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="136" width="289" height="19" uuid="84a84bef-5faf-4967-a153-dd9ae4a29706"/>
+				<textFieldExpression><![CDATA[$P{pemohon}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="155" width="289" height="19" uuid="3a4adb79-a66c-4343-8d36-1540ef182760"/>
+				<textFieldExpression><![CDATA[$P{no_surat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="174" width="289" height="19" uuid="16271d42-6180-4b5b-845c-adcbb2a296cc"/>
+				<textFieldExpression><![CDATA[$P{tgl_reg}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="203" y="213" width="289" height="19" uuid="3a1ace13-ef5a-42f7-9d1e-2d4953707f5f"/>
+				<textFieldExpression><![CDATA[$P{tgl_verifikasi}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="178" y="400" width="102" height="19" uuid="a6c6278c-dd13-4364-a3f3-ce707ad425f7"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(0778) 470052]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="419" width="102" height="19" uuid="beb8fe6d-ceee-4e58-ad1f-a0b2c01286d4"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[(0778) 470055]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="438" width="102" height="19" uuid="468edbea-31ad-4051-8c74-c69ead4eb936"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[0811 7073 000]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="457" width="168" height="19" uuid="8f5c9d2d-9b04-48d9-afc5-0096a5f1a788"/>
+				<textElement textAlignment="Left">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ptsp@bpbatam.go.id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="178" y="476" width="168" height="19" uuid="7b256b53-ae36-4a87-9f3b-3bed04fbe81a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[@pengaduanPTSP]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+</jasperReport>

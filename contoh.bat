@@ -1,0 +1,2 @@
+echo hai semuanya
+exit
